@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Modules\Comission\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
+
+class ComissionSetting extends Model {
+
+    protected $table='comissions_setting';
+
+    protected $fillable = [
+        'merchant_id',
+        'comission_rate',
+        'comission_type',
+        'from_date',
+        'to_date',
+        'items',
+        'status'
+    ];
+
+    public function relMerchant(){
+        return $this->hasone('App\User', 'id', 'merchant_id');
+    }
+
+    // TODO :: boot
+    // boot() function used to insert logged user_id at 'created_by' & 'updated_by'
+    public static function boot(){
+        parent::boot();
+        static::creating(function($query){
+            if(Auth::check()){
+                $query->created_by = @\Auth::user()->id;
+            }
+        });
+        static::updating(function($query){
+            if(Auth::check()){
+                $query->updated_by = @\Auth::user()->id;
+            }
+        });
+    }
+
+}

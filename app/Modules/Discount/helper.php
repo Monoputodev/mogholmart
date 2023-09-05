@@ -1,0 +1,5 @@
+<?php
+
+/**
+ *	Discount Helper  
+ */

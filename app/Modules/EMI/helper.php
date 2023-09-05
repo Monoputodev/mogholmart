@@ -1,0 +1,5 @@
+<?php
+
+/**
+ *	EMI Helper  
+ */

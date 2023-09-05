@@ -1,0 +1,8 @@
+.lightGray {
+    background: lightgray !important;
+    color: blue;
+}
+
+select.form-control.selectHeight40px:not([size]):not([multiple]){
+    height:40px;
+}
