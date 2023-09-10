@@ -8186,13 +8186,7 @@ Version:1.0
 
 }
 
-.panel-heading {
-
-    padding: 0;
-
-    border: 0;
-
-}
+.panel-heading {padding: 0;border: 0;margin: 10px;}
 
 .panel-group {
 
@@ -8200,21 +8194,7 @@ Version:1.0
 
 }
 
-.panel-group .panel {
-
-    background-color: #fff;
-
-    border-top: 1px solid #ddd;
-
-    border-radius: 4px;
-
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-
-    text-align: center;
-
-}
+.panel-group .panel {background-color: #fff;border-top: 1px solid #ddd;border-radius: 4px;-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);box-shadow: 0 1px 1px rgba(0, 0, 0, .05);/* text-align: center; */}
 
 .panel-body ul li {
 

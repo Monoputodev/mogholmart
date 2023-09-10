@@ -22,20 +22,19 @@
 		<div class="row">
 			<div id="content" class="col-md-12 form-main">
 					<h2 class="heading-title">Frequently Asked Questions</h2>
-					<span class="title-tag">Last Updated on May, 2020</span>
 					<div class="panel-group checkout-steps" id="accordion">
 						<!-- checkout-step-01  -->
 
 
 						@if(isset($faqdata))
-						@foreach($faqdata as $key=> $data)					
+						@foreach($faqdata as $key=> $data)
 						<div class="panel panel-default checkout-step-{{ $key+1 }}">
 
 							<!-- panel-heading -->
 							<div class="panel-heading">
 								<h4 class="unicase-checkout-title">
-									<a data-toggle="collapse" class="" data-parent="#accordion" href="#collapse{{ $key+1 }}">
-										<span>{{ $key+1 }}</span>{{isset($data->title)?$data->title :''}}
+									<a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapse{{ $key+1 }}">
+										<span>{{isset($data->title)?$data->title :''}}
 									</a>
 								</h4>
 							</div>
@@ -45,7 +44,7 @@
 
 								<!-- panel-body  -->
 								<div class="panel-body">
-									{!! isset($data->description)?$data->description:'' !!}	
+									{!! isset($data->description)?$data->description:'' !!}
 								</div>
 								<!-- panel-body  -->
 

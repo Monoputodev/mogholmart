@@ -812,7 +812,7 @@ class CartController extends Controller
                 if($order_head->save())
                 {
 
-                    $order_head->order_number = 'mogholmart-'.str_replace('-','',date('Y-m-d')).'-'.str_pad($order_head->id,6,"0",STR_PAD_LEFT);
+                    $order_head->order_number = env('APP_SHORT_NAME').'-'.str_replace('-','',date('Y-m-d')).'-'.str_pad($order_head->id,6,"0",STR_PAD_LEFT);
                     $order_head->save();
 
                     $billing_model->order_head_id = $order_head->id;

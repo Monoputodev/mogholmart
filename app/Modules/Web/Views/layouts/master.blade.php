@@ -12,7 +12,7 @@ if(Session::has('main_logo')){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta name="description" content="{{env('APP_NAME')}}|  Online shopping at cheapest price in Bangladesh">
 	<meta name="author" content="theLarasoft.com">
-	<meta name="keywords" content="Moghol Mart |  Online shopping at cheapest price in Bangladesh">
+	<meta name="keywords" content="{{ env('APP_NAME') }} |  Online shopping at cheapest price in Bangladesh">
 	<meta name="robots" content="all">
 	<link rel="icon" type="image/png" href="{{ URL::to('uploads/generel_file') }}/{{ $main_logo->value }}">
 	<meta property="og:url" content="{{config('global.DOMAIN_NAME')}}<?php  print $_SERVER['REQUEST_URI']; ?>" />
